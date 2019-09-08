@@ -160,14 +160,14 @@ public class FileExplore extends AppCompatActivity {
 
             }
 
-//            if (!firstLvl) {
-//                FileItem temp[] = new FileItem[fileList.length + 1];
-//                for (int i = 0; i < fileList.length; i++) {
-//                    temp[i + 1] = fileList[i];
-//                }
-//                temp[0] = new FileItem("Up",true);
-//                fileList = temp;
-//            }
+            if (!firstLvl) {
+                FileItem temp[] = new FileItem[fileList.length + 1];
+                for (int i = 0; i < fileList.length; i++) {
+                    temp[i + 1] = fileList[i];
+                }
+                temp[0] = new FileItem("Up",true);
+                fileList = temp;
+            }
         } else {
             Utils.showToast(this, "path does not exist");
         }
